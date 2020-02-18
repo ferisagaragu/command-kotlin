@@ -7,37 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="807ed2bd-43af-4080-9513-bcc5f2b8d214" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db600336de8efa858a93a38d25f6994e99ae2100" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/entity/Category.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/util/Rest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/javabrain/console/ExternalCommand.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/javabrain/console/Help.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/javabrain/console/InternalCommand.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/javabrain/entity/Category.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/javabrain/entity/Command.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/javabrain/entity/Presentation.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/javabrain/enums/Folder.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/javabrain/util/Rest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/691d84d06d89ce686bb5476af175492f372bc9d2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/8106051573b552865a948d15839584a7b374515f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c834767273c46bd9418ff7fcb479d34d80565193" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c834767273c46bd9418ff7fcb479d34d80565193" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d2de255d3b29ff7dc4cbcfc5d918499a3037abf5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/e/4ee8f94ef916221288c52efc88bf3ba17549fade" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f33e445a8c720e348930d5d3c777e0b9ca4afb9b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/AppKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/AppKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/console/Print.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/console/Print.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/entity/Config.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/enums/StructureEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/file/FileReader$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/file/FileReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/console/ExternalCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/console/ExternalCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/util/Rest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/command-reactive/org/javabrain/util/Rest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/javabrain/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/javabrain/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/javabrain/console/Print.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/javabrain/console/Print.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/javabrain/entity/Config.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/javabrain/enums/StructureEnum.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/javabrain/file/FileReader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/javabrain/file/File.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/javabrain/file/Xml.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/javabrain/console/ExternalCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/javabrain/console/ExternalCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/javabrain/util/Rest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/javabrain/util/Rest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +141,7 @@
       <workItem from="1581956326347" duration="764000" />
       <workItem from="1581961032924" duration="1032000" />
       <workItem from="1581992846677" duration="42000" />
-      <workItem from="1582044026662" duration="3420000" />
+      <workItem from="1582044026662" duration="4192000" />
     </task>
     <servers />
   </component>
@@ -195,34 +171,34 @@
       <screen x="-1920" y="-316" width="1920" height="1040" />
     </state>
     <state x="-1180" y="-38" key="FileChooserDialogImpl/0.0.1366.728/-1920.-316.1920.1040@-1920.-316.1920.1040" timestamp="1581708194565" />
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1582051538135">
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom" timestamp="1582051835338">
       <screen x="-1920" y="-316" width="1920" height="1040" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom/-1920.-316.1920.1040/0.0.1366.728@-1920.-316.1920.1040" timestamp="1582051538135" />
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom/-1920.-316.1920.1040/0.0.1366.728@-1920.-316.1920.1040" timestamp="1582051835338" />
     <state width="1877" height="311" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-316.1920.1040@-1920.-316.1920.1040" timestamp="1581717336146" />
     <state width="1323" height="186" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1581955890303" />
     <state width="1323" height="188" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581899612310" />
     <state width="1877" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.304.1366.728@0.0.1920.1040" timestamp="1581915516159" />
-    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1582051538135">
+    <state width="1877" height="286" key="GridCell.Tab.0.center" timestamp="1582051835338">
       <screen x="-1920" y="-316" width="1920" height="1040" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.center/-1920.-316.1920.1040/0.0.1366.728@-1920.-316.1920.1040" timestamp="1582051538135" />
+    <state width="1877" height="286" key="GridCell.Tab.0.center/-1920.-316.1920.1040/0.0.1366.728@-1920.-316.1920.1040" timestamp="1582051835338" />
     <state width="1877" height="311" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-316.1920.1040@-1920.-316.1920.1040" timestamp="1581717336145" />
     <state width="1323" height="186" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1581955890302" />
     <state width="1323" height="188" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581899612310" />
     <state width="1877" height="186" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.304.1366.728@0.0.1920.1040" timestamp="1581915516159" />
-    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1582051538135">
+    <state width="1877" height="286" key="GridCell.Tab.0.left" timestamp="1582051835338">
       <screen x="-1920" y="-316" width="1920" height="1040" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.left/-1920.-316.1920.1040/0.0.1366.728@-1920.-316.1920.1040" timestamp="1582051538135" />
+    <state width="1877" height="286" key="GridCell.Tab.0.left/-1920.-316.1920.1040/0.0.1366.728@-1920.-316.1920.1040" timestamp="1582051835338" />
     <state width="1877" height="311" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-316.1920.1040@-1920.-316.1920.1040" timestamp="1581717336145" />
     <state width="1323" height="186" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1581955890302" />
     <state width="1323" height="188" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581899612310" />
     <state width="1877" height="186" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.304.1366.728@0.0.1920.1040" timestamp="1581915516159" />
-    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1582051538135">
+    <state width="1877" height="286" key="GridCell.Tab.0.right" timestamp="1582051835338">
       <screen x="-1920" y="-316" width="1920" height="1040" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.right/-1920.-316.1920.1040/0.0.1366.728@-1920.-316.1920.1040" timestamp="1582051538135" />
+    <state width="1877" height="286" key="GridCell.Tab.0.right/-1920.-316.1920.1040/0.0.1366.728@-1920.-316.1920.1040" timestamp="1582051835338" />
     <state width="1877" height="311" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-316.1920.1040@-1920.-316.1920.1040" timestamp="1581717336145" />
     <state width="1323" height="186" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1581955890303" />
     <state width="1323" height="188" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581899612310" />

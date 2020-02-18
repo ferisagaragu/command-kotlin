@@ -1,5 +1,6 @@
 package org.javabrain
 
+import org.javabrain.console.ExternalCommand
 import org.javabrain.console.Help
 import org.javabrain.console.InternalCommand
 import org.javabrain.console.Print
@@ -16,21 +17,17 @@ fun main() {
   val rest = Rest()
   val help = Help()
   val internalCommand = InternalCommand()
+  val externalCommand = ExternalCommand()
+  val presentation = externalCommand.getPresentation()
+
   var categorySelect = false
-
-  val presentation = rest.get(
-    "/presentation",
-    Presentation::class
-  ).first as Presentation
-
+  var command = Command()
 
   print.importantNlUndecorated(presentation.logo)
   print.successNlUndecorated(presentation.subTitle)
   println()
 
   do {
-    var command: Command = Command()
-
     try {
     	if (!categorySelect) {
         help.printBasicInstructions()

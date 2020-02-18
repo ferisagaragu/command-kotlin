@@ -42,7 +42,7 @@ class Rest {
 			val allText = connection.inputStream.bufferedReader().use(BufferedReader::readText)
 			connection.disconnect()
 
-			File.write(
+			/*File.write(
 				gson.toJson(allText).replace(
 					"\"{",
 					"{"
@@ -59,7 +59,7 @@ class Rest {
 						"\\"
 					)
 				}.json"
-			)
+			)*/
 
 			convertJsonToObject(allText, kClass)
 		}
