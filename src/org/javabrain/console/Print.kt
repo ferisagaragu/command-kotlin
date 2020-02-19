@@ -100,7 +100,7 @@ class Print {
 	}
 
 	fun errorNl(text: String) {
-		println(ansi().fg(RED).a(".reactive-error> $text").reset())
+		println(ansi().fg(RED).a(".reactive-error> ${text}\n").reset())
 	}
 
 	fun errorUndecorated(text: String) {

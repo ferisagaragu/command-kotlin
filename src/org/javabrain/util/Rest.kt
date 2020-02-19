@@ -36,7 +36,7 @@ class Rest {
 			connection.setRequestProperty("Accept", "application/json")
 
 			if (connection.responseCode != 200) {
-				throw RuntimeException("Failed : HTTP error code : ${connection.responseCode}")
+				throw RuntimeException("Unrecognized command")
 			}
 
 			val allText = connection.inputStream.bufferedReader().use(BufferedReader::readText)

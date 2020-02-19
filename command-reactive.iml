@@ -10,5 +10,6 @@
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.6" level="project" />
     <orderEntry type="library" name="org.fusesource.jansi:jansi:1.18" level="project" />
+    <orderEntry type="library" name="mordant-1.2.1" level="project" />
   </component>
 </module>

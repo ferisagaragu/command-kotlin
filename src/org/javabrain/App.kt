@@ -1,51 +1,49 @@
 package org.javabrain
 
+import org.fusesource.jansi.AnsiConsole
 import org.javabrain.console.ExternalCommand
-import org.javabrain.console.Help
 import org.javabrain.console.InternalCommand
+import org.javabrain.console.Message
 import org.javabrain.console.Print
 import org.javabrain.entity.Command
-import org.javabrain.entity.Presentation
-import org.javabrain.util.Rest
-import java.lang.Exception
 
 
-@Throws
-fun main() {
+fun main(args: Array<String>) {
 
+  var root = args[0]
+  var location = args[0]
+  var exit = false
+  var command: Command
+  //AnsiConsole.systemInstall()
   val print = Print()
-  val rest = Rest()
-  val help = Help()
-  val internalCommand = InternalCommand()
-  val externalCommand = ExternalCommand()
-  val presentation = externalCommand.getPresentation()
+  val internalCommand = InternalCommand(print, root)
+  val externalCommand = ExternalCommand(print)
+  val message = Message(print, externalCommand, location)
 
-  var categorySelect = false
-  var command = Command()
-
-  print.importantNlUndecorated(presentation.logo)
-  print.successNlUndecorated(presentation.subTitle)
-  println()
+  message.presentation()
+  message.printBasicInstructions()
 
   do {
     try {
-    	if (!categorySelect) {
-        help.printBasicInstructions()
-      }
       command = print.readLine()
 
-      if (!categorySelect) {
-        internalCommand.setCategory(print, command)
-        categorySelect = true
+      when(command.arg1) {
+        "set" -> when (command.arg2) {
+          "category" -> externalCommand.setCategory(command.arg3)
+          else -> print.errorNl("'${command.arg2}' is unrecognized command")
+        }
+        "help" -> println("ayuda")
+        "cd" -> location = internalCommand.cd(location, command.arg2)
+        "root" -> location = internalCommand.root()
+        "bye" -> exit = true
+
+        else -> print.errorNl("'${command.arg1}' is unrecognized command")
       }
 
-      if (internalCommand.isCategory(command)) {
-
-      }
 		} catch (e: Exception) {
-      println(e.message as Any)
+      print.errorNl(e.message!!)
     }
-  } while (command.arg1 != "bye")
+  } while (!exit)
 
   print.successNlUndecorated("Se you later ;)")
 }

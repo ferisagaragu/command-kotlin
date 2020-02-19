@@ -1,23 +1,32 @@
 package org.javabrain.console
 
-import org.javabrain.entity.Category
-import org.javabrain.entity.Command
+import java.io.File
 
 
-class InternalCommand {
+class InternalCommand(
+	private val print: Print,
+	private val root: String
+) {
 
-	private val externalCommand = ExternalCommand()
-
-
-	fun isCategory(command: Command): Boolean {
-		return (command.arg1 == "set") &&
-			(command.arg2 == "category") &&
-			(command.arg3.isNotEmpty())
+	@Throws
+	fun cd(root: String, arg2: String): String {
+		if (arg2.isNotEmpty()) {
+			if (File("$root$arg2").exists()) {
+				val path: String = File("$root$arg2").absolutePath;
+				print.infoNl("Location change to: $path")
+				return path
+			} else {
+				throw Exception("the folder does not exist")
+			}
+		} else {
+			throw Exception("cd requires more than one argument")
+		}
 	}
 
-	fun setCategory(print: Print, command: Command) {
-		var category: Category = externalCommand.getCategory(command.arg1)
-		print.category = category.name
+	@Throws
+	fun root(): String {
+		print.infoNl("Location change to: $root")
+		return root
 	}
 
 }
