@@ -2,6 +2,7 @@ package org.javabrain.console
 
 import org.fusesource.jansi.Ansi.Color.*
 import org.fusesource.jansi.Ansi.ansi
+import org.javabrain.entity.Category
 import org.javabrain.entity.Command
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -27,7 +28,9 @@ class Print {
 			arg1 = data[0],
 			arg2 = if (data.size >= 2) data[1] else "" ,
 			arg3 = if (data.size >= 3) data[2] else "" ,
-			description = ""
+			description = "",
+			instructions = listOf(),
+			category = Category()
 		)
 	}
 

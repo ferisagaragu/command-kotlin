@@ -1,6 +1,7 @@
 package org.javabrain.file
 
 import java.io.*
+import java.io.File
 
 
 class File {
@@ -28,12 +29,18 @@ class File {
 
 		@JvmStatic
 		@Throws
-		fun write(fileContent: String, path: String) {
+		fun write(fileContent: String, location: String, path: String, fileName: String) {
+			val file = File("$location${path}")
+			val fileOut = File("${file.absolutePath}\\$fileName")
+			file.mkdirs()
+
 			val out: Writer = BufferedWriter(
 				OutputStreamWriter(
-					FileOutputStream(path), "UTF-8"
+					FileOutputStream(fileOut),
+					"UTF-8"
 				)
 			)
+
 			out.write(fileContent)
 			out.close()
 		}
