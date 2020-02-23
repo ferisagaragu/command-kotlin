@@ -7,7 +7,7 @@ import org.javabrain.console.Message
 import org.javabrain.console.Print
 import org.javabrain.entity.Command
 
-
+//generate component /insidence
 fun main(args: Array<String>) {
 
   if (args.size < 2) {

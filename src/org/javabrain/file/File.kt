@@ -44,6 +44,13 @@ class File {
 			out.write(fileContent)
 			out.close()
 		}
+
+		@JvmStatic
+		@Throws
+		fun dir(location: String, path: String) {
+			val file = File("$location${path}")
+			file.mkdirs()
+		}
 	}
 
 }

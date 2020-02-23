@@ -3,6 +3,7 @@ package org.javabrain.console
 import org.javabrain.entity.Category
 import org.javabrain.entity.Command
 import org.javabrain.entity.Instruction
+import org.javabrain.entity.Message
 import org.javabrain.entity.Presentation
 import org.javabrain.enums.CommandAttribute
 import org.javabrain.file.File
@@ -71,21 +72,29 @@ class ExternalCommand(
 			Command::class
 		).first as Command
 
-		if (command.arg3 == CommandAttribute.ARG3.value) {
+		if (command.arg3 == CommandAttribute.PATH.value) {
 			if (arg3.isEmpty()) {
 				throw Exception("Command requires a third parameter")
 			}
 		}
 
 		command.instructions.forEach { instruction: Instruction ->
-			val path = Path(arg3, instruction)
+			val path = Path(arg3, instruction, location)
 
-			File.write(
-				injectableProperties(path, instruction),
-				location,
-				path.getPath(),
-				path.getFileName()
-			)
+			if (instruction.type.name == "FOLDER") {
+				File.dir(location, path.getPath())
+			} else {
+				File.write(
+					injectableProperties(path, instruction),
+					location,
+					path.getPath(),
+					path.getFileName()
+				)
+			}
+
+			instruction.messages.forEach { message: Message ->
+				printMessage(message, path.getFileName())
+			}
 		}
 
 		return command
@@ -111,8 +120,36 @@ class ExternalCommand(
 				injectableProperties.lowerCamelCase(path.getClassName())
 			)
 			.replace(
+				"\${upperCamelCaseSimple}",
+				injectableProperties.upperCamelCase(path.getSimpleClassName())
+			)
+			.replace(
+				"\${lowerCamelCaseSimple}",
+				injectableProperties.lowerCamelCase(path.getSimpleClassName())
+			)
+			.replace(
+				"\${upperSnakeCaseSimple}",
+				injectableProperties.upperSnakeCase(path.getSimpleClassName())
+			)
+			.replace(
+				"\${lowerSnakeCaseSimple}",
+				injectableProperties.lowerCamelCase(path.getSimpleClassName())
+			)
+			.replace(
+				"\${package}",
+				path.getPackage()
+			)
+			.replace(
+				"\${packageSpring}",
+				path.getPackageSpring()
+			)
+			.replace(
 				"\${fileName}",
 				path.getSimpleFileName()
+			)
+			.replace(
+				"\${originalFileName}",
+				path.getOriginalFileName()
 			)
 
 			/*
@@ -133,7 +170,19 @@ class ExternalCommand(
 			${)}	Mostrara >
 			${and}	Mostrara &
 			${or}	Mostrara símbolo or
-			 */
+		*/
+	}
+
+	private fun printMessage(message: Message, fileName: String) {
+		when (message.type) {
+			1 -> print.detailNl(message.message.replace("\${fileName}", fileName))
+			2 -> print.infoNl(message.message.replace("\${fileName}", fileName))
+			3 -> print.successNl(message.message.replace("\${fileName}", fileName))
+			4 -> print.importantNl(message.message.replace("\${fileName}", fileName))
+			5 -> print.errorNl(message.message.replace("\${fileName}", fileName))
+			6 -> print.warningNl(message.message.replace("\${fileName}", fileName))
+			else -> print.defaultNl(message.message.replace("\${fileName}", fileName))
+		}
 	}
 
 }

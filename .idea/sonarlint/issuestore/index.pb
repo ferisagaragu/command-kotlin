@@ -21,3 +21,9 @@ N
 src/org/javabrain/file/File.kt,1\0\10ff19ffaf17c761984ed22f761f1b5397999790
 T
 $src/org/javabrain/console/Message.kt,e\e\ee5ff156e5cf777f7154e44a9efef4c43eb66cfc
+[
++src/org/javabrain/enums/CommandAttribute.kt,d\d\dde4ee0806330f2e1dc716653da5fbe596f4171a
+N
+src/org/javabrain/file/Path.kt,d\5\d53fc73d6ee8b93651c5ff51f42f1647e90cbff5
+^
+.src/org/javabrain/file/InjectableProperties.kt,e\a\ea9a0451facaf357bf68a844c5b475401fb93692

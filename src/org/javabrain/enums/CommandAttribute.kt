@@ -1,5 +1,6 @@
 package org.javabrain.enums
 
 enum class CommandAttribute(val value: String) {
-	ARG3("{path}")
+	PATH("{path}"),
+	INSTRUCTION("{instruction}")
 }

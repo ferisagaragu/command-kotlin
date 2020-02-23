@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="command-reactive:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/command_reactive_jar</output-path>
+    <output-path>$PROJECT_DIR$/../../React/command-admin</output-path>
     <root id="archive" name="command-reactive.jar">
       <element id="module-output" name="command-reactive" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar" path-in-jar="/" />
